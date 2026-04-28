@@ -1,0 +1,919 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NeteaseCloudMusicApi</name>
+    </assembly>
+    <members>
+        <member name="T:NeteaseCloudMusicApi.CloudMusicApi">
+            <summary>
+            网易云音乐API
+            </summary>
+        </member>
+        <member name="P:NeteaseCloudMusicApi.CloudMusicApi.Cookies">
+            <summary>
+            Cookies
+            </summary>
+        </member>
+        <member name="P:NeteaseCloudMusicApi.CloudMusicApi.RealIP">
+            <summary>
+            请求头中的 X-Real-IP，如果为 <see langword="null"/> 则不设置
+            </summary>
+        </member>
+        <member name="P:NeteaseCloudMusicApi.CloudMusicApi.UseProxy">
+            <summary>
+            是否使用代理
+            </summary>
+        </member>
+        <member name="P:NeteaseCloudMusicApi.CloudMusicApi.Proxy">
+            <summary>
+            代理
+            </summary>
+        </member>
+        <member name="M:NeteaseCloudMusicApi.CloudMusicApi.#ctor">
+            <summary>
+            构造器
+            </summary>
+        </member>
+        <member name="M:NeteaseCloudMusicApi.CloudMusicApi.#ctor(System.Net.CookieCollection)">
+            <summary>
+            构造器
+            </summary>
+            <param name="cookies"></param>
+        </member>
+        <member name="M:NeteaseCloudMusicApi.CloudMusicApi.#ctor(System.String)">
+            <summary>
+            构造器
+            </summary>
+            <param name="cookies"></param>
+        </member>
+        <member name="M:NeteaseCloudMusicApi.CloudMusicApi.#ctor(System.Collections.Generic.IEnumerable{System.Net.Cookie})">
+            <summary>
+            构造器
+            </summary>
+            <param name="cookies"></param>
+        </member>
+        <member name="M:NeteaseCloudMusicApi.CloudMusicApi.RequestAsync(NeteaseCloudMusicApi.CloudMusicApiProvider,System.Collections.Generic.Dictionary{System.String,System.Object},System.Boolean)">
+            <summary>
+            API请求
+            </summary>
+            <param name="provider">API提供者</param>
+            <param name="queries">参数</param>
+            <param name="throwIfFailed">如果请求失败，抛出异常</param>
+            <returns></returns>
+        </member>
+        <member name="M:NeteaseCloudMusicApi.CloudMusicApi.IsSuccess(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            API是否请求成功
+            </summary>
+            <param name="json">服务器返回的数据</param>
+            <returns></returns>
+        </member>
+        <member name="T:NeteaseCloudMusicApi.CloudMusicApiProvider">
+            <summary>
+            网易云音乐API提供者
+            </summary>
+        </member>
+        <member name="P:NeteaseCloudMusicApi.CloudMusicApiProvider.Route">
+            <summary />
+        </member>
+        <member name="M:NeteaseCloudMusicApi.CloudMusicApiProvider.ToString">
+            <summary />
+        </member>
+        <member name="T:NeteaseCloudMusicApi.CloudMusicApiProviders">
+            <summary>
+            所有网易云音乐API提供者
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.ActivateInitProfile">
+            <summary>
+            初始化昵称
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Album">
+            <summary>
+            获取专辑内容
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.AlbumDetailDynamic">
+            <summary>
+            专辑动态信息
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.AlbumNewest">
+            <summary>
+            最新专辑
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.AlbumSub">
+            <summary>
+            收藏/取消收藏专辑
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.AlbumSublist">
+            <summary>
+            已收藏专辑列表
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Artists">
+            <summary>
+            歌手单曲
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.ArtistAlbum">
+            <summary>
+            歌手专辑列表
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.ArtistDesc">
+            <summary>
+            获取歌手描述
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.ArtistList">
+            <summary>
+            歌手分类列表
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.ArtistMv">
+            <summary>
+            获取歌手 mv
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.ArtistSub">
+            <summary>
+            收藏/取消收藏歌手
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.ArtistSublist">
+            <summary>
+            收藏的歌手列表
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.ArtistTopSong">
+            <summary>
+            歌手热门50首歌曲
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Banner">
+            <summary>
+            banner
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Batch">
+            <summary>
+            batch批量请求接口
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.CaptchaSent">
+            <summary>
+            发送验证码
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.CaptchaVerify">
+            <summary>
+            验证验证码
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.CellphoneExistenceCheck">
+            <summary>
+            检测手机号码是否已注册
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.CheckMusic">
+            <summary>
+            音乐是否可用
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Comment">
+            <summary>
+            发送/删除评论
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.CommentAlbum">
+            <summary>
+            专辑评论
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.CommentDj">
+            <summary>
+            电台节目评论
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.CommentEvent">
+            <summary>
+            获取动态评论
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.CommentHot">
+            <summary>
+            热门评论
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.CommentHotwallList">
+            <summary>
+            云村热评
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.CommentLike">
+            <summary>
+            给评论点赞
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.CommentMusic">
+            <summary>
+            歌曲评论
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.CommentMv">
+            <summary>
+            mv 评论
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.CommentPlaylist">
+            <summary>
+            歌单评论
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.CommentVideo">
+            <summary>
+            视频评论
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DailySignin">
+            <summary>
+            签到
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DigitalAlbumPurchased">
+            <summary>
+            我的数字专辑
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjBanner">
+            <summary>
+            电台banner
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjCategoryExcludehot">
+            <summary>
+            电台 - 非热门类型
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjCategoryRecommend">
+            <summary>
+            电台 - 推荐类型
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjCatelist">
+            <summary>
+            电台 - 分类
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjDetail">
+            <summary>
+            电台 - 详情
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjHot">
+            <summary>
+            热门电台
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjPaygift">
+            <summary>
+            电台 - 付费精选
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjProgram">
+            <summary>
+            电台 - 节目
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjProgramDetail">
+            <summary>
+            电台 - 节目详情
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjProgramToplist">
+            <summary>
+            电台 - 节目榜
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjProgramToplistHours">
+            <summary>
+            电台 - 24小时节目榜
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjRadioHot">
+            <summary>
+            电台 - 类别热门电台
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjRecommend">
+            <summary>
+            电台 - 推荐
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjRecommendType">
+            <summary>
+            电台 - 分类推荐
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjSub">
+            <summary>
+            电台 - 订阅
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjSublist">
+            <summary>
+            电台的订阅列表
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjTodayPerfered">
+            <summary>
+            电台 - 今日优选
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjToplist">
+            <summary>
+            电台 - 新晋电台榜/热门电台榜
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjToplistHours">
+            <summary>
+            电台 - 24小时主播榜
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjToplistNewcomer">
+            <summary>
+            电台 - 主播新人榜
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjToplistPay">
+            <summary>
+            电台 - 付费精品
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.DjToplistPopular">
+            <summary>
+            电台 - 最热主播榜
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Event">
+            <summary>
+            获取动态消息
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.EventDel">
+            <summary>
+            删除用户动态
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.EventForward">
+            <summary>
+            转发用户动态
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.FmTrash">
+            <summary>
+            垃圾桶
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Follow">
+            <summary>
+            关注/取消关注用户
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.HotTopic">
+            <summary>
+            获取热门话题
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Like">
+            <summary>
+            喜欢音乐
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Likelist">
+            <summary>
+            喜欢音乐列表
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Login">
+            <summary>
+            邮箱登录
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.LoginCellphone">
+            <summary>
+            手机登录
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.LoginQrKey">
+            <summary>
+            二维码登录
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.LoginQrCheck">
+            <summary>
+            二维码检查
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.LoginRefresh">
+            <summary>
+            登录刷新
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.LoginStatus">
+            <summary>
+            登录状态
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Logout">
+            <summary>
+            退出登录
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Lyric">
+            <summary>
+            歌词
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.MsgComments">
+            <summary>
+            通知 - 评论
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.MsgForwards">
+            <summary>
+            通知 - @我
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.MsgNotices">
+            <summary>
+            通知 - 通知
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.MsgPrivate">
+            <summary>
+            通知 - 私信
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.MsgPrivateHistory">
+            <summary>
+            私信内容
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.MvAll">
+            <summary>
+            全部 mv
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.MvDetail">
+            <summary>
+            获取 mv 数据
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.MvExclusiveRcmd">
+            <summary>
+            网易出品mv
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.MvFirst">
+            <summary>
+            最新 mv
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.MvSub">
+            <summary>
+            收藏/取消收藏 MV
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.MvSublist">
+            <summary>
+            收藏的 MV 列表
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.MvUrl">
+            <summary>
+            mv 地址
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Personalized">
+            <summary>
+            推荐歌单
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PersonalizedDjprogram">
+            <summary>
+            推荐电台
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PersonalizedMv">
+            <summary>
+            推荐 mv
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PersonalizedNewsong">
+            <summary>
+            推荐新音乐
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PersonalizedPrivatecontent">
+            <summary>
+            独家放送
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PersonalFm">
+            <summary>
+            私人 FM
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PlaylistCatlist">
+            <summary>
+            歌单分类
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PlaylistCreate">
+            <summary>
+            新建歌单
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PlaylistDelete">
+            <summary>
+            删除歌单
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PlaylistDescUpdate">
+            <summary>
+            更新歌单描述
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PlaylistDetail">
+            <summary>
+            获取歌单详情
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PlaylistHot">
+            <summary>
+            热门歌单分类
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PlaylistNameUpdate">
+            <summary>
+            更新歌单名
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PlaylistSubscribe">
+            <summary>
+            收藏/取消收藏歌单
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PlaylistSubscribers">
+            <summary>
+            歌单收藏者
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PlaylistTagsUpdate">
+            <summary>
+            更新歌单标签
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PlaylistTracks">
+            <summary>
+            对歌单添加或删除歌曲
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PlaylistUpdate">
+            <summary>
+            更新歌单
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.PlaymodeIntelligenceList">
+            <summary>
+            心动模式/智能播放
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.ProgramRecommend">
+            <summary>
+            推荐节目
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Rebind">
+            <summary>
+            更换绑定手机
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.RecommendResource">
+            <summary>
+            每日推荐歌单
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.RecommendSongs">
+            <summary>
+            每日推荐歌曲
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.RegisterCellphone">
+            <summary>
+            注册(修改密码)
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.RelatedAllvideo">
+            <summary>
+            相关视频
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.RelatedPlaylist">
+            <summary>
+            相关歌单推荐
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.ResourceLike">
+            <summary>
+            资源点赞( MV,电台,视频)
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Scrobble">
+            <summary>
+            听歌打卡
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Search">
+            <summary>
+            搜索
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.SearchDefault">
+            <summary>
+            默认搜索关键词
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.SearchHot">
+            <summary>
+            热搜列表(简略)
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.SearchHotDetail">
+            <summary>
+            热搜列表(详细)
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.SearchMultimatch">
+            <summary>
+            搜索多重匹配
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.SearchSuggest">
+            <summary>
+            搜索建议
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.SendPlaylist">
+            <summary>
+            发送私信(带歌单)
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.SendText">
+            <summary>
+            发送私信
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Setting">
+            <summary>
+            设置
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.ShareResource">
+            <summary>
+            分享歌曲、歌单、mv、电台、电台节目到动态
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.SimiArtist">
+            <summary>
+            获取相似歌手
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.SimiMv">
+            <summary>
+            相似 mv
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.SimiPlaylist">
+            <summary>
+            获取相似歌单
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.SimiSong">
+            <summary>
+            获取相似音乐
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.SimiUser">
+            <summary>
+            获取最近 5 个听了这首歌的用户
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.SongDetail">
+            <summary>
+            获取歌曲详情
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.SongUrl">
+            <summary>
+            获取音乐 url
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Toplist">
+            <summary>
+            所有榜单
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.ToplistArtist">
+            <summary>
+            歌手榜
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.ToplistDetail">
+            <summary>
+            所有榜单内容摘要
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.TopAlbum">
+            <summary>
+            新碟上架
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.TopArtists">
+            <summary>
+            热门歌手
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Top_List">
+            <summary>
+            排行榜
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.TopMv">
+            <summary>
+            mv 排行
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.TopPlaylist">
+            <summary>
+            歌单 ( 网友精选碟 )
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.TopPlaylistHighquality">
+            <summary>
+            获取精品歌单
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.TopSong">
+            <summary>
+            新歌速递
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.UserAudio">
+            <summary>
+            用户电台
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.UserCloud">
+            <summary>
+            云盘
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.UserCloudDel">
+            <summary>
+            云盘歌曲删除
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.UserCloudDetail">
+            <summary>
+            云盘数据详情
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.UserCloudMatch">
+            <summary>
+            云盘歌曲匹配
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.UserDetail">
+            <summary>
+            获取用户详情
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.UserDj">
+            <summary>
+            获取用户电台
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.UserEvent">
+            <summary>
+            获取用户动态
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.UserFolloweds">
+            <summary>
+            获取用户粉丝列表
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.UserFollows">
+            <summary>
+            获取用户关注列表
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.UserPlaylist">
+            <summary>
+            获取用户歌单
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.UserRecord">
+            <summary>
+            获取用户播放记录
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.UserSubcount">
+            <summary>
+            获取用户信息 , 歌单，收藏，mv, dj 数量
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.UserUpdate">
+            <summary>
+            更新用户信息
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.VideoDetail">
+            <summary>
+            视频详情
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.VideoGroup">
+            <summary>
+            获取视频标签下的视频
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.VideoGroupList">
+            <summary>
+            获取视频标签列表
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.VideoSub">
+            <summary>
+            收藏视频
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.VideoUrl">
+            <summary>
+            获取视频播放地址
+            </summary>
+        </member>
+        <member name="F:NeteaseCloudMusicApi.CloudMusicApiProviders.Weblog">
+            <summary>
+            操作记录 （无文档）
+            </summary>
+        </member>
+        <member name="T:NeteaseCloudMusicApi.Utils.QuickHttp">
+             <summary>
+             a VERY VERY EASY http request helper
+             </summary>
+             <remarks>
+             SOMETHING IMPORTANT:
+             
+             1.
+             Default value of <see cref="P:System.Net.Http.HttpClientHandler.UseCookies"/> is true. Set <see cref="P:System.Net.Http.HttpClientHandler.UseCookies"/> to false so that <see cref="T:System.Net.Http.HttpClient"/> will use cookies in headers not in <see cref="T:System.Net.Http.HttpClientHandler"/>.
+             In .NET Framework, when <see cref="P:System.Net.Http.HttpClientHandler.UseCookies"/> is true, <see cref="T:System.Net.Http.HttpClient"/> won't use cookies in <see cref="T:System.Net.Http.HttpClient"/>.
+             In .NET Core, when <see cref="P:System.Net.Http.HttpClientHandler.UseCookies"/> is true, cookies in headers will be merged into final request not be replaced by cookies in <see cref="T:System.Net.Http.HttpClientHandler"/>.
+            
+             2.
+             If HttpClientHandler can't automatically parse Set-Cookie correctly in .NET 5.0 and later versions, please try enabling 'System.Globalization.UseNls' switch.
+             By default 'System.Globalization.UseNls' switch is false in .NET 5.0 and later versions and <see cref="P:System.Globalization.GregorianCalendar.TwoDigitYearMax"/> is 2029. It will cause a few cookies like 'Thu, 31-Dec-37 23:55:55 GMT' be regard as expired.
+             How to enable NLS: https://docs.microsoft.com/en-us/dotnet/core/run-time-config/globalization#nls
+            
+             3.
+             <see cref="T:System.Net.Http.HttpClient"/> is fully rewrited in .NET Core, so many behaviors are different with <see cref="T:System.Net.Http.HttpClient"/> in .NET Framework.
+             </remarks>
+        </member>
+        <member name="T:NeteaseCloudMusicApi.Utils.QuickHttp.Out`1">
+            <summary>
+            Used for out parameter in async method
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:System.Extensions.ExceptionExtensions.GetInmostException(System.Exception)">
+            <summary>
+            获取最内层异常
+            </summary>
+            <param name="exception"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Extensions.ExceptionExtensions.ToFullString(System.Exception)">
+            <summary>
+            返回一个字符串，其中包含异常的所有信息。
+            </summary>
+            <param name="exception"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

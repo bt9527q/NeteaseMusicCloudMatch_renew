@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Downloads\\NeteaseMusicCloudMatch_fixed_minimal_songdetailfix\\NeteaseMusicCloudMatch-master\\NeteaseCloudMusicApi\\NeteaseCloudMusicApi.csproj": {}
+  },
+  "projects": {
+    "D:\\Downloads\\NeteaseMusicCloudMatch_fixed_minimal_songdetailfix\\NeteaseMusicCloudMatch-master\\NeteaseCloudMusicApi\\NeteaseCloudMusicApi.csproj": {
+      "version": "3.25.3.10000",
+      "restore": {
+        "projectUniqueName": "D:\\Downloads\\NeteaseMusicCloudMatch_fixed_minimal_songdetailfix\\NeteaseMusicCloudMatch-master\\NeteaseCloudMusicApi\\NeteaseCloudMusicApi.csproj",
+        "projectName": "NeteaseCloudMusicApi",
+        "projectPath": "D:\\Downloads\\NeteaseMusicCloudMatch_fixed_minimal_songdetailfix\\NeteaseMusicCloudMatch-master\\NeteaseCloudMusicApi\\NeteaseCloudMusicApi.csproj",
+        "packagesPath": "C:\\Users\\30499\\.nuget\\packages\\",
+        "outputPath": "D:\\Downloads\\NeteaseMusicCloudMatch_fixed_minimal_songdetailfix\\NeteaseMusicCloudMatch-master\\NeteaseCloudMusicApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\30499\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "framework": "netstandard2.0",
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.200"
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "framework": "netstandard2.0",
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.5-beta1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

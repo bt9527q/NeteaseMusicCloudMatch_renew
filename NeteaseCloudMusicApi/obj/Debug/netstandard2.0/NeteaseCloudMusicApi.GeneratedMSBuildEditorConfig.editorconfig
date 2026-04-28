@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = NeteaseCloudMusicApi
+build_property.ProjectDir = D:\Downloads\NeteaseMusicCloudMatch_fixed_minimal_songdetailfix\NeteaseMusicCloudMatch-master\NeteaseCloudMusicApi\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 
